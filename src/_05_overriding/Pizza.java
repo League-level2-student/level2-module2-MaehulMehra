@@ -30,12 +30,10 @@ public class Pizza {
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
-	
 	public void show() {
 		frame.setTitle("Pizza");
 		label.setIcon(loadImage("pizza.jpeg"));
 	}
-	
 	public void receipt() {
 		System.out.println("You purchased a pizza for $10");
 	}
