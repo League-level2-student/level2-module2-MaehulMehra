@@ -34,6 +34,7 @@ public class Pizza {
 		frame.setTitle("Pizza");
 		label.setIcon(loadImage("pizza.jpeg"));
 	}
+
 	public void receipt() {
 		System.out.println("You purchased a pizza for $10");
 	}
