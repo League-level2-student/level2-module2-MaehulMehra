@@ -18,31 +18,27 @@ import javax.swing.JPanel;
  * GOAL: Create your own custom pop-up messages
  */
 public class LeagueOptionPane {
-	/*
+
 	public static void showMessageDialog(String message) {
 		// 1. Open example.png and make a GUI that looks like that
 		//    The message parameter is what we want to show on our pop-up
-		BufferedImage image1;
-		try {
-			image1 = ImageIO.read(new File ("./league.png"));
 			JFrame frame = new JFrame ("Message");
 			JPanel panel = new JPanel ();
-			JLabel label = new JLabel (new ImageIcon (image1));
+			JLabel label = new JLabel ();
+			JLabel label2 = new JLabel ();
 			frame.setVisible(true);
+			panel.add(label2);
 			panel.add(label);
 			label.setText(message);
+			label2.setIcon(loadImage ("league.png"));
 			frame.add(panel);
 			frame.pack();
 			
 			// 2. Uncomment the line of code below. It sets the location of our frame to the center of the screen
 			frame.setLocationRelativeTo(null);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 	}
-	*/
+	
 	
 	// 3. Call this method in the Runner class
 	
@@ -53,10 +49,13 @@ public class LeagueOptionPane {
 		JFrame frame = new JFrame (title);
 		JPanel panel = new JPanel ();
 		JLabel label = new JLabel ();
+		JLabel label2 = new JLabel ();
 		frame.setVisible(true);
 		frame.add(panel);
+		panel.add(label2);
 		panel.add(label);
 		label.setText(message);
+		label2.setIcon(loadImage ("League.png"));
 		frame.pack();
 		frame.setLocationRelativeTo(null);
 		
@@ -66,7 +65,20 @@ public class LeagueOptionPane {
 	
 	// 6. Create another showMessageDialog() method that lets us choose the Message, Title, and Image
 	//    3 String parameters (one for the message, one for the title, and one for the fileName)
-	
+	public static void showMessageDialog (String title, String message, String filename) {
+		JFrame frame = new JFrame (title);
+		JPanel panel = new JPanel ();
+		JLabel label = new JLabel ();
+		JLabel label2 = new JLabel ();
+		frame.setVisible(true);
+		frame.add(panel);
+		panel.add(label2);
+		panel.add(label);
+		label.setText(message);
+		label2.setIcon(loadImage (filename));
+		frame.pack();
+		frame.setLocationRelativeTo(null);
+	}
 	// 7. Call this method in the Runner class
 	
 	// CHALLENGE: 

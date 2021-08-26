@@ -5,5 +5,6 @@ public class LeagueOptionPaneRunner {
 		LeagueOptionPane pane = new LeagueOptionPane ();
 		pane.showMessageDialog("The league is the best");
 		pane.showMessageDialog ("This is your message", "Hello, my name is Maehul");
+		pane.showMessageDialog("This is your message", "Hello, my name is Maehul", "leagueDark.png");
 	}
 }
